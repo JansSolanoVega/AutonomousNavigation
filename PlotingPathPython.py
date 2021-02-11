@@ -7,7 +7,7 @@ fig,ax1=plt.subplots(figsize=(12,6))
 ax1.set_xlabel("X")
 ax1.set_ylabel("Y")
 ax1.set_title("CAR'S PATH")
-ser = serial.Serial('COM3', 115200) #Abrimos puerto Serie, sustituir 'dev/ttyUSB0', por 'COM2', 'COM3' o el puerto que use el Arduino en tu PC.
+ser = serial.Serial('COM3', 115200) 
 ax1.plot(50, 50, "bo-")
 def plotea (i):
     xx=[]
