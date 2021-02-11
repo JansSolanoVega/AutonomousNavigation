@@ -1,7 +1,7 @@
-from matplotlib import pyplot as plt #Importa pyplot para realizar la gráfica.
-from matplotlib import animation  #Importa animation que permite actualizar la gráfica en intervalos concretos
-from matplotlib import style #Permite cambiar el estilo de nuestra gráfica.
-import serial #Importa librería para trabajar con el puerto serie.
+from matplotlib import pyplot as plt
+from matplotlib import animation 
+from matplotlib import style 
+import serial 
 
 fig,ax1=plt.subplots(figsize=(12,6))
 ax1.set_xlabel("X")
@@ -21,11 +21,10 @@ def plotea (i):
         print(data[0],data[1])
     ax1.set_ylim([-30, 60])
     ax1.set_xlim([-30,60])
-   #Nos permite comprobar si hay un error al ejecutar la siguiente instrucción.
 
     try:  # Nos permite comprobar si hay un error al ejecutar la siguiente instrucción.
-        ax1.plot(xx,yy, "r--")  # Plotea los datos en x de 0 a 100.
-    except:  # Si se produce el error al plotear no hacemos nada y evitamos que el programa se pare.
+        ax1.plot(xx,yy, "r--")  
+    except: 
         pass
 
 ani = animation.FuncAnimation(fig, plotea, interval = 1) #Creamos animación para que se ejecute la función plotea con un intervalo de 1ms.
